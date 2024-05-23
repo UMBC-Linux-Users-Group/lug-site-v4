@@ -1,0 +1,176 @@
+:root {
+	--gold-primary: #fdb515;
+	--gold-primary-dimmed: #fdb51577;
+
+	--harsh-black: #0f0f0f;
+	--inner-container-shadow: #4b4b4b69;
+
+	--easy-grey: #3b3b3b;
+	--soft-white: #f5f5f5;
+	--background: #2e2e2e;
+
+	--divider: #787878;
+
+	--parallax-container-width: 300px;
+	--terminal-radius: 10px;
+}
+
+html, section, body {
+	background-color: var(--background);
+}
+
+
+.lug-header {
+	background-color: var(--background);
+}
+
+img.lug-logo-image {
+	min-height: 5px;
+	min-width: 5px;
+	max-width: 50px;
+	max-height: 50px;
+	margin-right: 5px;
+}
+
+.unix-dir-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.unix-dir-container > span:nth-of-type(2) {
+	font-style: italic;
+	font-size: 0.75rem;
+	margin-left: 10px;
+	color: var(--gold-primary);
+}
+
+.banner {
+	height: 300px;
+}
+
+.particles {
+	height: 300px;
+	width: 100%;
+	background-color: var(--gold-primary);
+	box-shadow: 0px 0px 10px 10px var(--inner-container-shadow) inset;
+	position: absolute;
+	z-index: 20;
+}
+
+.tilt {
+  z-index: 20;
+  width: 80%;
+  transform-style: preserve-3d;
+  transform: translateZ(1000px);
+  margin-top: 20px;
+}
+
+.popout-container {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 200;
+}
+
+.tilt-parallax {
+	transform: translateZ(50px);
+	justify-content: center;
+	align-items: center;
+	z-index: 200;
+}
+
+
+.header {
+	background-color: red;
+	z-index: 400;
+}
+
+.banner > div > div > h1 {
+	color: var(--soft-white);
+	font-weight: 900;
+	font-size: 48px;
+	z-index: 400;
+}
+
+.separator::after {
+	content: ' ';
+	width: 100%;
+	max-width: 510px;
+	height: 1px;
+	background-color: var(--soft-white);
+	position: absolute;
+	left: calc(50% - 255px);
+	border-radius: 2%;
+}
+
+span.blip {
+	width: 50px;
+	height: 5px;
+	background-color: var(--gold-primary);
+	display: block;
+	border-radius: 5px;
+}
+
+.max-1000 {
+	width: 100% !important;
+	max-width: 1000px !important;
+}
+
+.terminal {
+	width: 100%;
+	margin-top: 10px;
+	font-family: "Share Tech Mono", monospace;
+	color: white;
+}
+
+.terminal > div:nth-of-type(1) {
+	background-color: var(--divider);
+	border-top-left-radius: var(--terminal-radius);
+	border-top-right-radius: var(--terminal-radius);
+	height: 30px;
+	padding: 0px !important;
+	width: 100%;
+}
+
+.terminal > div:nth-of-type(2) {
+	background-color: var(--harsh-black);
+	border-bottom-left-radius: var(--terminal-radius);
+	border-bottom-right-radius: var(--terminal-radius);
+	min-height: 200px;
+	height: fit-content;
+	padding: 0px !important;
+	width: 100%;
+}
+
+.terminal > div:nth-of-type(2) > ul {
+	list-style: none;
+}
+
+.terminal > div:nth-of-type(2) > ul > li::before {
+	content: 'user@lug.umbc.edu ~ $ ';
+	color: var(--soft-white);
+}
+
+.terminal > div:nth-of-type(2) > ul > li.defer::before{
+	content: '> ';
+}
+
+.terminal > div:nth-of-type(2) > ul > li.defer-nl::before{
+	content: '-';
+	color: black;
+}
+
+
+@media (max-width: 510px) {
+	.separator::after {
+		max-width: unset;
+		position: absolute;
+		left: 0
+	}
+
+	.tilt-parallax > h2 {
+		font-size: 22px;
+	}
+}
