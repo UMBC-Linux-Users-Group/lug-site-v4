@@ -1,3 +1,6 @@
+const particleColor = '#565656'
+const lineColor = particleColor
+
 particlesJS("particles", {
   "particles": {
     "number": {
@@ -8,16 +11,16 @@ particlesJS("particles", {
       }
     },
     "color": {
-      "value": "#2b2b2b"
+      "value": particleColor
     },
     "shape": {
       "type": "edge",
       "stroke": {
         "width": 0,
-        "color": "#4a4a4a"
+        "color": lineColor
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 20
       },
     },
     "opacity": {
@@ -43,13 +46,13 @@ particlesJS("particles", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#4a4a4a",
+      "color": lineColor,
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 1,
       "direction": "none",
       "random": false,
       "straight": false,
